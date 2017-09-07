@@ -23,3 +23,6 @@ allow hal_camera_default mnt_vendor_file:dir r_dir_perms;
 
 # Sysfs
 allow hal_camera_default sysfs:file r_file_perms;
+
+# For boot time GPU access (b/111370628)
+hal_client_domain(hal_camera_default, hal_configstore)
