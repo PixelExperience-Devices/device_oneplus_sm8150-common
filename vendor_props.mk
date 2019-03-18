@@ -130,7 +130,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.disable_hw_recovery_dump=1 \
     vendor.display.disable_inline_rotator=1 \
     vendor.display.disable_scaler=0 \
-    vendor.display.enable_null_display=0
+    vendor.display.enable_null_display=0 \
+    vendor.display.enable_optimize_refresh=1
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
