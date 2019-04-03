@@ -3,6 +3,9 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
+# Add GSI keys to ramdisk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
