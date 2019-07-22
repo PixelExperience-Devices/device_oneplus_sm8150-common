@@ -48,4 +48,6 @@
     <string name="category_vibrator">Вібрація</string>
     <string name="vib_strength_title_head">Сила</string>
     <string name="vib_strength_summary_head">Задати силу вібрації</string>
+    <string name="audio_title">Звук</string>
+    <string name="dolby_title">Dolby Atmos</string>
 </resources>

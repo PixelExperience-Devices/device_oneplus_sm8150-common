@@ -67,4 +67,8 @@
     <string name="vib_strength_title_head">Strength</string>
     <string name="vib_strength_summary_head">Define the strength of the vibrator</string>
     <string name="vibration_warning">Setting strength too high may cause permanent hardware damage</string>
+
+    <!-- Dolby Atmos -->
+    <string name="audio_title">Audio</string>
+    <string name="dolby_title">Dolby Atmos</string>
 </resources>

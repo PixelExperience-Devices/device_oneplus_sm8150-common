@@ -89,4 +89,17 @@
           android:entries="@array/notification_slider_action_entries"
           android:entryValues="@array/notification_slider_action_entry_values" />
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="audio"
+        android:title="@string/audio_title">
+        <Preference
+            android:key="audio_dolby_atmos"
+            android:title="@string/dolby_title">
+            <intent
+                 android:targetPackage="com.oneplus.sound.tuner"
+                 android:targetClass="com.oneplus.sound.tuner.panoramic.DolbyPanoramicSoundActivity" />
+        </Preference>
+    </PreferenceCategory>
+    
 </PreferenceScreen>
