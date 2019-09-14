@@ -21,4 +21,7 @@
     <color name="config_fodColorBackground">#00000000</color>
     
     <color name="config_fodColor">#ccccac</color>
+
+    <!-- Allow devices override audio panel location to the left side -->
+    <bool name="config_audioPanelOnLeftSide">true</bool>
 </resources>
