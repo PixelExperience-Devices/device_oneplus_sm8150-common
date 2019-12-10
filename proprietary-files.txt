@@ -1658,6 +1658,14 @@ vendor/firmware/ring_T-Jingle.bin
 vendor/firmware/shuntai24k_rtp.bin
 vendor/firmware/wentai24k_rtp.bin
 
+# Vibrator HAL
+vendor/lib/hw/vibrator.default.so
+vendor/lib/hw/android.hardware.vibrator@1.0-impl.so
+vendor/lib64/hw/vibrator.default.so
+vendor/lib64/hw/android.hardware.vibrator@1.0-impl.so
+vendor/etc/init/android.hardware.vibrator@1.0-service.rc
+vendor/bin/hw/android.hardware.vibrator@1.0-service
+
 # WiFi
 vendor/bin/hw/vendor.oneplus.hardware.wifi@1.0-service
 vendor/bin/cnss-daemon
