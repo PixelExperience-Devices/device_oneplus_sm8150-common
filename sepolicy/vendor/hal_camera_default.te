@@ -11,6 +11,9 @@ allow hal_camera_default hal_cameraHIDL_hwservice:hwservice_manager find;
 allow hal_camera_default persist_camera_file:dir w_dir_perms;
 allow hal_camera_default persist_camera_file:file create_file_perms;
 
+# Allow hal_camera_default to search in mnt/vendor
+allow hal_camera_default mnt_vendor_file:dir search;
+
 # Range device
 allow hal_camera_default vl53l1_device:chr_file rw_file_perms;
 
@@ -31,3 +34,6 @@ allow hal_camera_default sysfs:file r_file_perms;
 
 # For boot time GPU access (b/111370628)
 hal_client_domain(hal_camera_default, hal_configstore)
+
+# Allow hal_camera_default to read sys files
+allow hal_camera_default sysfs:file read;
