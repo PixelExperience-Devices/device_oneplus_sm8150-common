@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device;
+package com.statix.device.DeviceSettings;
 
 import android.content.Context;
 import android.media.AudioManager;
@@ -34,13 +34,18 @@ public class KeyHandler implements DeviceKeyHandler {
 
     private final Context mContext;
     private final AudioManager mAudioManager;
-    private final Vibrator mVibrator;
+    private Vibrator mVibrator;
 
     public KeyHandler(Context context) {
         mContext = context;
 
         mAudioManager = mContext.getSystemService(AudioManager.class);
-        mVibrator = mContext.getSystemService(Vibrator.class);
+
+        mVibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+        if (mVibrator == null || !mVibrator.hasVibrator()) {
+            mVibrator = null;
+        }
+
     }
 
     public KeyEvent handleKeyEvent(KeyEvent event) {
@@ -69,5 +74,13 @@ public class KeyHandler implements DeviceKeyHandler {
             mVibrator.vibrate(VibrationEffect.createOneShot(50,
                     VibrationEffect.DEFAULT_AMPLITUDE));
         }
+    }
+
+    public void handleNavbarToggle(boolean enabled) {
+        // do nothing
+    }
+
+    public boolean canHandleKeyEvent(KeyEvent event) {
+        return false;
     }
 }
