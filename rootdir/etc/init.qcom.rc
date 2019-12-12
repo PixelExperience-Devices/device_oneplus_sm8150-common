@@ -168,6 +168,10 @@ on boot
     chmod 0666 /dev/qseecom
     chmod 0666 /dev/goodix_fp
 
+    # DC-Dimming
+    chmod 0660 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/dimlayer_bl_en
+    chown system system /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/dimlayer_bl_en
+
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/device/extldo
     chmod 0660 /sys/class/rfkill/rfkill0/device/extldo
 
