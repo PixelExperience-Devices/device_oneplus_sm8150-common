@@ -1,5 +1,6 @@
 # Audio
 persist.vendor.audio.hac.enable    u:object_r:vendor_audio_prop:s0
+vendor.audio.firstplayalarm        u:object_r:vendor_audio_prop:s0
 
 # Camera
 camera.OPpictureId    u:object_r:vendor_camera_prop:s0
