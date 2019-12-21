@@ -13,5 +13,11 @@
     "repository"  : "LineageOS/android_device_oneplus_common",
     "target_path" : "device/oneplus/common",
     "branch"      : "lineage-17.1"
+  },
+  {
+    "repository"  : "packages_apps_PixelLiveWallpaper",
+    "target_path" : "packages/apps/PixelLiveWallpaper",
+    "branch"      : "ten",
+    "remote"      : "pixel-gitlab"
   }
 ]
