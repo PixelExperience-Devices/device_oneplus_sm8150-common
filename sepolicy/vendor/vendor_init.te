@@ -19,3 +19,6 @@ get_prop(vendor_init, vendor_tee_listener_prop)
 # Allow vendor_init to set vendor_camera_prop
 set_prop(vendor_init, vendor_camera_prop)
 set_prop(vendor_init, persist_camera_prop)
+
+# Allow vendor_init to read and write to dash_device
+allow vendor_init dash_device:chr_file rw_file_perms;
