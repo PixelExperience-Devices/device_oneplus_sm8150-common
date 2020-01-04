@@ -24,3 +24,6 @@ allow hal_param_default init:unix_stream_socket connectto;
 # Allow hal_param_default to read sysfs_project_info
 allow hal_param_default sysfs_project_info:dir search;
 allow hal_param_default sysfs_project_info:file r_file_perms;
+
+# Allow read to hal_param_default device and read/write to property socket
+allow hal_param_default property_socket:sock_file write;
