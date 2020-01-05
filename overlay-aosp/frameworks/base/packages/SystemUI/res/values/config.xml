@@ -30,4 +30,7 @@
 
     <!-- Enable face auth only when swiping security view -->
     <bool name="config_faceAuthOnlyOnSecurityView">true</bool>
+
+     <!-- Color of the FOD view -->
+    <color name="config_fodColor">#ccccac</color>
 </resources>
