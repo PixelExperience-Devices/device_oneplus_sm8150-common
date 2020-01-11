@@ -53,20 +53,14 @@ public class DeviceSettings extends PreferenceFragment
 
 
     private static final String KEY_CATEGORY_GRAPHICS = "graphics";
-    public static final String KEY_SRGB_SWITCH = "srgb";
     public static final String KEY_HBM_SWITCH = "hbm";
     public static final String KEY_AUTO_HBM_SWITCH = "auto_hbm";
     public static final String KEY_AUTO_HBM_THRESHOLD = "auto_hbm_threshold";
     public static final String KEY_DC_SWITCH = "dc";
-    public static final String KEY_DCI_SWITCH = "dci";
-    public static final String KEY_NIGHT_SWITCH = "night";
-    public static final String KEY_WIDECOLOR_SWITCH = "widecolor";
-
-    private static final String KEY_CATEGORY_REFRESH = "refresh";
     public static final String KEY_REFRESH_RATE = "refresh_rate";
     public static final String KEY_AUTO_REFRESH_RATE = "auto_refresh_rate";
     public static final String KEY_FPS_INFO = "fps_info";
-
+    private static final String KEY_ENABLE_DOLBY_ATMOS = "enable_dolby_atmos";
     public static final String KEY_VIBSTRENGTH = "vib_strength";
 
 
@@ -75,9 +69,7 @@ public class DeviceSettings extends PreferenceFragment
     private static TwoStatePreference mHBMModeSwitch;
     private static TwoStatePreference mAutoHBMSwitch;
     private static TwoStatePreference mDCModeSwitch;
-    private static TwoStatePreference mRefreshRate;
-    private static SwitchPreference mAutoRefreshRate;
-    private static SwitchPreference mFpsInfo;
+    private static TwoStatePreference mEnableDolbyAtmos;
     private ListPreference mTopKeyPref;
     private ListPreference mMiddleKeyPref;
     private ListPreference mBottomKeyPref;
@@ -111,7 +103,8 @@ public class DeviceSettings extends PreferenceFragment
         mAutoHBMSwitch = (TwoStatePreference) findPreference(KEY_AUTO_HBM_SWITCH);
         mAutoHBMSwitch.setChecked(PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(DeviceSettings.KEY_AUTO_HBM_SWITCH, false));
         mAutoHBMSwitch.setOnPreferenceChangeListener(this);
-
+        mEnableDolbyAtmos = (TwoStatePreference) findPreference(KEY_ENABLE_DOLBY_ATMOS);
+        mEnableDolbyAtmos.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -126,9 +119,29 @@ public class DeviceSettings extends PreferenceFragment
             SharedPreferences.Editor prefChange = PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
             prefChange.putBoolean(KEY_AUTO_HBM_SWITCH, enabled).commit();
             Utils.enableService(getContext());
-        } else {
-            Constants.setPreferenceInt(getContext(), preference.getKey(), Integer.parseInt((String) newValue));
         }
+        else if (preference == mEnableDolbyAtmos) {
+            boolean enabled = (Boolean) newValue;
+            Intent daxService = new Intent();
+            ComponentName name = new ComponentName("com.dolby.daxservice", "com.dolby.daxservice.DaxService");
+            daxService.setComponent(name);
+            if (enabled) {
+                // enable service component and start service
+                this.getContext().getPackageManager().setComponentEnabledSetting(name,
+                        PackageManager.COMPONENT_ENABLED_STATE_DEFAULT, 0);
+                this.getContext().startService(daxService);
+            } else {
+                // disable service component and stop service
+                this.getContext().stopService(daxService);
+                this.getContext().getPackageManager().setComponentEnabledSetting(name,
+                        PackageManager.COMPONENT_ENABLED_STATE_DISABLED, 0);
+            }
+            return true; 
+        }
+        else {
+            Constants.setPreferenceInt(getContext(), preference.getKey(), Integer.parseInt((String) newValue));
+            return true;
+        } 
         return true;
     }
 
