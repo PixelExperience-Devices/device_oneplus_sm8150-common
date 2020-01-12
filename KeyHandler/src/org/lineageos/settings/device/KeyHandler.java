@@ -24,6 +24,7 @@ import android.media.AudioManager;
 import android.os.FileObserver;
 import android.os.RemoteException;
 import android.os.Vibrator;
+import android.os.VibrationEffect;
 import android.util.Log;
 import android.view.KeyEvent;
 
@@ -83,16 +84,29 @@ public class KeyHandler implements DeviceKeyHandler {
 
     public KeyEvent handleKeyEvent(KeyEvent event) {
         int scanCode = event.getScanCode();
+        int currentRingerMode = mAudioManager.getRingerModeInternal();
 
         switch (scanCode) {
             case MODE_NORMAL:
-                mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_NORMAL);
+                if (currentRingerMode != AudioManager.RINGER_MODE_NORMAL) {
+                    mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_NORMAL);
+                } else {
+                    return event;
+                }
                 break;
             case MODE_VIBRATION:
-                mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_VIBRATE);
+                if (currentRingerMode != AudioManager.RINGER_MODE_VIBRATE) {
+                    mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_VIBRATE);
+                } else {
+                    return event;
+                }
                 break;
             case MODE_SILENCE:
-                mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_SILENT);
+                if (currentRingerMode != AudioManager.RINGER_MODE_SILENT) {
+                    mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_SILENT);
+                } else {
+                    return event;
+                }
                 break;
             default:
                 return event;
@@ -107,7 +121,7 @@ public class KeyHandler implements DeviceKeyHandler {
             return;
         }
 
-        mVibrator.vibrate(50);
+        mVibrator.vibrate(VibrationEffect.get(VibrationEffect.EFFECT_POP));
     }
 
     private void onDisplayOn() {
