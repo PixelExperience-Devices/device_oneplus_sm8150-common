@@ -35,6 +35,7 @@ import android.os.PowerManager.WakeLock;
 import android.os.SystemClock;
 import android.os.SystemProperties;
 import android.os.Vibrator;
+import android.os.VibrationEffect;
 import android.provider.Settings;
 import android.util.Log;
 import android.util.SparseIntArray;
@@ -128,7 +129,7 @@ public class KeyHandler implements DeviceKeyHandler {
         if (mVibrator == null) {
             return;
         }
-	mVibrator.vibrate(50);
+	mVibrator.vibrate(VibrationEffect.get(VibrationEffect.EFFECT_POP));
     }
 
     public void handleNavbarToggle(boolean enabled) {
