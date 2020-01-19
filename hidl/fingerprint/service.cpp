@@ -32,6 +32,7 @@ using android::sp;
 int main() {
     android::sp<IBiometricsFingerprint> bio = BiometricsFingerprint::getInstance();
 
+    android::hardware::setMinSchedulerPolicy(bio, SCHED_RR, -20);
     configureRpcThreadpool(1, true /*callerWillJoin*/);
 
     if (bio != nullptr) {
