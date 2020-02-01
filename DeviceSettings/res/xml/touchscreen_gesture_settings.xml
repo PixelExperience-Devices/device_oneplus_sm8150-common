@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Copyright (c) 2020 StatiXOS
+     Copyright (C) 2016 The CyanogenMod Project
+
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
@@ -11,13 +12,14 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="touchscreen_gesture_settings"
+    android:title="@string/touchscreen_gesture_settings_title">
 
-    <!-- States whether device has a high refresh rate display -->
-    <bool name="config_deviceHasHighRefreshRate">true</bool>
-
-    <!-- Default action ids for a device's touchscreen gestures
-         The array should be sorted in the same order as the
-         touchscreen gestures advertised by the device's LineageHW impl. -->
-    <integer-array name="config_defaultTouchscreenGestureActions" />
-</resources>
+    <SwitchPreference
+        android:key="touchscreen_gesture_haptic_feedback"
+        android:title="@string/touchscreen_gestures_haptic_feedback_title"
+        android:summary="@string/touchscreen_gestures_haptic_feedback_summary"
+        android:defaultValue="true" />
+</PreferenceScreen>
