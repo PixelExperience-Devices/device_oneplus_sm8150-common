@@ -14,4 +14,8 @@
     <!-- Allow devices to hide ringer button above volume slider -->
     <bool name="config_hideRingerButton">true</bool>
 
+    <!-- Burn-in protection -->
+    <bool name="config_statusBarBurnInProtection">true</bool>
+    <integer name="config_shift_interval">40</integer>
+
 </resources>
