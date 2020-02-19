@@ -185,6 +185,7 @@ PRODUCT_PACKAGES += \
     init.oem.debug.rc \
     init.oem.engineermode.sh \
     init.oem.rc \
+    init.opcamera.rc \
     init.qcom.class_core.sh \
     init.qcom.coex.sh \
     init.qcom.crashdata.sh \
