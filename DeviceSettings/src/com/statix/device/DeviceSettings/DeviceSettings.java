@@ -83,8 +83,8 @@ public class DeviceSettings extends PreferenceFragment
 
         // Vibrator Strength
         mVibratorStrength = (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);
-        if (mVibratorStrength != null) {
-            mVibratorStrength.setEnabled(VibratorStrengthPreference.isSupported());
+        if (mVibratorStrength == null || !VibratorStrengthPreference.isSupported()) {
+            getPreferenceScreen().removePreference((Preference) findPreference("vibrator"));
         }
 
         // DC Dimming
