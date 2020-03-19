@@ -21,3 +21,5 @@ allow hal_lineage_fod_sm8150 hal_fingerprint_hwservice:hwservice_manager find;
 
 # Allow hal_lineage_fod_sm8150 to read and write to sysfs_fod
 allow hal_lineage_fod_sm8150 sysfs_fod:file rw_file_perms;
+
+allow hal_lineage_fod_sm8150 sysfs_dm:file r_file_perms;
