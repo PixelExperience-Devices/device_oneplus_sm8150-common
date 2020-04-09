@@ -2,3 +2,6 @@ allow system_server hal_cameraHIDL_hwservice:hwservice_manager find;
 binder_call(system_server, hal_cameraHIDL_default)
 get_prop(system_server, persist_camera_prop)
 get_prop(system_server, vendor_camera_prop)
+
+allow system_server vendor_camera_prop:file { read open getattr map };
+allow system_server vendor_default_prop:file { read open getattr map };
