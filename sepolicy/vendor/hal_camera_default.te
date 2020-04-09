@@ -1,6 +1,9 @@
 # Binder calls to hal_cameraHIDL
 binder_call(hal_camera_default, hal_cameraHIDL)
 
+# Binder calls to system_server
+binder_call(hal_camera_default, system_server)
+
 # Allow hal_camera_default to find hal_cameraHIDL_hwservice
 allow hal_camera_default hal_cameraHIDL_hwservice:hwservice_manager find;
 
@@ -20,8 +23,8 @@ allow hal_camera_default input_device:chr_file r_file_perms;
 
 # Vendor files
 allow hal_camera_default mnt_vendor_file:dir r_dir_perms;
-allow hal_camera_default vendor_camera_data_file:dir rw_dir_perms;
-allow hal_camera_default vendor_camera_data_file:file rw_file_perms;
+allow hal_camera_default vendor_camera_data_file:dir create_dir_perms;
+allow hal_camera_default vendor_camera_data_file:file create_file_perms;
 
 # Sysfs
 allow hal_camera_default sysfs:file r_file_perms;
