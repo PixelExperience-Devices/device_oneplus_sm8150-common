@@ -2,7 +2,7 @@
   {
     "repository"  : "kernel_oneplus_sm8150",
     "target_path" : "kernel/oneplus/sm8150",
-    "branch"      : "ten"
+    "branch"      : "ten-wip"
   },
   {
     "repository"  : "vendor_oneplus",
