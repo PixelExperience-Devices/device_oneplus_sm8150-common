@@ -218,9 +218,9 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.has_wide_color_display=true \
     ro.surface_flinger.has_HDR_display=true \
     ro.surface_flinger.use_color_management=true \
-    ro.surface_flinger.set_idle_timer_ms=4000 \
-    ro.surface_flinger.set_touch_timer_ms=4000 \
-    ro.surface_flinger.set_display_power_timer_ms=1000 \
+    ro.surface_flinger.set_idle_timer_ms=0 \
+    ro.surface_flinger.set_touch_timer_ms=5000 \
+    ro.surface_flinger.set_display_power_timer_ms=0 \
     ro.surface_flinger.use_smart_90_for_video=true \
     ro.surface_flinger.protected_contents=true
 
