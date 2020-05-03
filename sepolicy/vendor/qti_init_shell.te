@@ -6,3 +6,9 @@ allow qti_init_shell sysfs_scsi_host:file w_file_perms;
 
 # Allow qti_init_shell to get vendor_memplus_prop
 get_prop(qti_init_shell, vendor_memplus_prop)
+
+# Allow qti_init_shell to write to kmsg_device
+allow qti_init_shell kmsg_device:chr_file { write open };
+
+# Allow qti_init_shell to write to sysfs
+allow qti_init_shell sysfs:file { write };
