@@ -1,2 +1,6 @@
 # Allow sensors to get vendor_sensors_prop
 get_prop(sensors, vendor_sensors_prop)
+
+# Allow sensors to read sysfs_project_info
+allow sensors sysfs_project_info:dir { search };
+allow sensors sysfs_project_info:file { read getattr open };
