@@ -101,6 +101,11 @@
                     android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
+
+        <!-- Auto HBM service -->
+        <service android:name="org.aosp.device.DeviceSettings.AutoHBMService" />
+
+        <!-- Refresh rate tile -->
         <service
             android:name="org.aosp.device.DeviceSettings.RefreshRateTileService"
             android:icon="@drawable/ic_refresh_tile_60"

@@ -28,6 +28,12 @@
             android:title="@string/hbm_mode_title"
             android:defaultValue="false" />
 
+        <SwitchPreference
+            android:key="auto_hbm"
+            android:icon="@drawable/ic_hbm_mode_icon"
+            android:summary="@string/auto_hbm_summary"
+            android:title="@string/auto_hbm_title" />
+
         <Preference
             android:key="panel_category"
             android:icon="@drawable/ic_panel_modes_icon"
