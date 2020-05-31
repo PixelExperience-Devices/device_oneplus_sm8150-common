@@ -49,15 +49,10 @@
     <reference name="DEFAULT_DEVICE_CATEGORY_SPEAKER_VOLUME_CURVE">
     <!-- Default is Speaker Media Volume Curve -->
     <!--#ifdef VENDOR_EDIT 
-        lifei@OnePlus.MultiMediaService, 2016/11/17,modified music speaker volume curve for DOU test -->
-        <!--<point>1,-5800</point>
-        <point>20,-4000</point>
-        <point>60,-1700</point>
-        <point>100,-5800</point>-->
-        <!-- wangbuqing,increase volume before the 2/3 volume levels,20190126 -->
-        <point>1,-4200</point>
-        <point>25,-2500</point>
-        <point>50,-1500</point>
+        dujie@MM.Audio, 2020/01/15, reduce the minimum volume loudness -->
+        <point>1,-4750</point>
+        <point>20,-2650</point>
+        <point>60,-1150</point>
         <point>100,0</point>
     <!--#endif /*VENDOR_EDIT*/-->
     </reference>

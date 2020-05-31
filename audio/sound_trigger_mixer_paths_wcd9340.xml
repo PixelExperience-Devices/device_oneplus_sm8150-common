@@ -359,11 +359,11 @@
         <!-- modified by fred.li for 2 mic adc3 is primary mic SVA ADSP effect20181219-->
         <!-- OP_FEATURE_MM_SVA-->
         <!--ctl name="AIF3_CAP Mixer SLIM TX0" value="1" /-->
-        <ctl name="AIF3_CAP Mixer SLIM TX2" value="1" />
+        <ctl name="AIF3_CAP Mixer SLIM TX4" value="1" />
         <ctl name="SLIM_1_TX Channels" value="One" />
-        <ctl name="CDC_IF TX2 MUX" value="DEC2" />
-        <ctl name="ADC MUX2" value="AMIC" />
-        <ctl name="AMIC MUX2" value="ADC1" />
+        <ctl name="CDC_IF TX4 MUX" value="DEC4" />
+        <ctl name="ADC MUX4" value="AMIC" />
+        <ctl name="AMIC MUX4" value="ADC1" />
         <ctl name="ADC1 Volume" value="4" />
         <!--ctl name="CDC_IF TX0 MUX" value="DEC0" />
         <ctl name="ADC MUX0" value="AMIC" />
