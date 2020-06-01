@@ -17,17 +17,20 @@
 
         <SwitchPreference
             android:key="dc"
+            android:icon="@drawable/ic_dc_mode_icon"
             android:summary="@string/dc_mode_summary"
             android:title="@string/dc_mode_title" />
 
         <SwitchPreference
             android:key="hbm"
+            android:icon="@drawable/ic_hbm_mode_icon"
             android:summary="@string/hbm_mode_summary"
             android:title="@string/hbm_mode_title"
             android:defaultValue="false" />
 
         <Preference
             android:key="panel_category"
+            android:icon="@drawable/ic_panel_modes_icon"
             android:title="@string/panel_category_title"
             android:summary="@string/panel_category_summary"
             android:persistent="false" >
@@ -43,6 +46,7 @@
 
         <Preference
             android:key="touchscreen_gesture_settings"
+            android:icon="@drawable/ic_gestures_icon"
             android:persistent="false"
             android:title="@string/touchscreen_gesture_settings_title"
             android:summary="@string/touchscreen_gesture_settings_summary">
@@ -59,12 +63,14 @@
 
         <SwitchPreference
             android:key="auto_refresh_rate"
+            android:icon="@drawable/ic_auto_refresh_icon"
             android:summary="@string/auto_refresh_rate_summary"
             android:title="@string/auto_refresh_rate_title"
             android:persistent="true" />
 
         <SwitchPreference
             android:key="refresh_rate"
+            android:icon="@drawable/ic_forced_refresh_icon"
             android:summary="@string/refresh_rate_summary"
             android:title="@string/refresh_rate_title"
             android:persistent="false" />
@@ -76,6 +82,7 @@
 
         <SwitchPreference
             android:key="fps_info"
+            android:icon="@drawable/ic_fps_overlay_icon"
             android:title="@string/fps_info_title"
             android:summary="@string/fps_info_summary"
             android:persistent="true" />
