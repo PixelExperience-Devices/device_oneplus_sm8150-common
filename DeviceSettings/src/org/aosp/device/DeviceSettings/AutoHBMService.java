@@ -1,5 +1,6 @@
 package org.aosp.device.DeviceSettings;
 
+import android.app.KeyguardManager;
 import android.app.Service;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -28,22 +29,39 @@ public class AutoHBMService extends Service {
 
     public void deactivateLightSensorRead() {
         mSensorManager.unregisterListener(mSensorEventListener);
+        mAutoHBMActive = false;
+        enableHBM(false);
+    }
+
+    private void enableHBM(boolean enable) {
+        if (enable) {
+            Utils.writeValue(HBM_FILE, "5");
+        } else {
+            Utils.writeValue(HBM_FILE, "0");
+        }
+    }
+
+    private boolean isCurrentlyEnabled() {
+        return Utils.getFileValueAsBoolean(HBM_FILE, false);
     }
 
     SensorEventListener mSensorEventListener = new SensorEventListener() {
         @Override
         public void onSensorChanged(SensorEvent event) {
             float lux = event.values[0];
+            KeyguardManager km =
+                    (KeyguardManager) getSystemService(getApplicationContext().KEYGUARD_SERVICE);
+            boolean keyguardShowing = km.inKeyguardRestrictedInputMode();
             if (lux > 6500.0f) {
-                if (!mAutoHBMActive) {
+                if ((!mAutoHBMActive | !isCurrentlyEnabled()) && !keyguardShowing) {
                     mAutoHBMActive = true;
-                    Utils.writeValue(HBM_FILE, "5");
+                    enableHBM(true);
                 }
             }
             if (lux < 6500.0f) {
                 if (mAutoHBMActive) {
                     mAutoHBMActive = false;
-                    Utils.writeValue(HBM_FILE, "0");
+                    enableHBM(false);
                 }
             }
         }
