@@ -21,6 +21,8 @@
     <string name="hbm_mode_title">High brightness mode</string>
     <string name="auto_hbm_summary"></string>
     <string name="auto_hbm_title">Automatic High brightness mode</string>
+    <string name="auto_hbm_threshold_title">Automatic High brightness mode threshold (lux)</string>
+    <string name="auto_hbm_threshold_summary"></string>
     <string name="wide_color_mode_title">Wide Color mode</string>
     <string name="dci_mode_summary"></string>
     <string name="dci_mode_title">DCI-P3 wide colour gamut mode</string>

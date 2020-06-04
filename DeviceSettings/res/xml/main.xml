@@ -34,6 +34,11 @@
             android:summary="@string/auto_hbm_summary"
             android:title="@string/auto_hbm_title" />
 
+        <org.aosp.device.DeviceSettings.AutoHBMThresholdPreference
+            android:key="auto_hbm_threshold"
+            android:title="@string/auto_hbm_threshold_title"
+            android:summary="@string/auto_hbm_threshold_summary" />
+
         <Preference
             android:key="panel_category"
             android:icon="@drawable/ic_panel_modes_icon"

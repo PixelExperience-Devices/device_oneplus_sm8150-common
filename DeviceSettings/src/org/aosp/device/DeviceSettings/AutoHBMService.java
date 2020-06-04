@@ -6,12 +6,14 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.IBinder;
 import android.os.PowerManager;
+import androidx.preference.PreferenceManager;
 
 public class AutoHBMService extends Service {
     private static final String HBM_FILE = "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/hbm";
@@ -20,6 +22,8 @@ public class AutoHBMService extends Service {
 
     private SensorManager mSensorManager;
     Sensor mLightSensor;
+
+    private SharedPreferences mSharedPrefs;
 
     public void activateLightSensorRead() {
         mSensorManager = (SensorManager) getApplicationContext().getSystemService(Context.SENSOR_SERVICE);
@@ -52,13 +56,14 @@ public class AutoHBMService extends Service {
             KeyguardManager km =
                     (KeyguardManager) getSystemService(getApplicationContext().KEYGUARD_SERVICE);
             boolean keyguardShowing = km.inKeyguardRestrictedInputMode();
-            if (lux > 6500.0f) {
+            float threshold = Float.parseFloat(mSharedPrefs.getString(DeviceSettings.KEY_AUTO_HBM_THRESHOLD, "30000"));
+            if (lux > threshold) {
                 if ((!mAutoHBMActive | !isCurrentlyEnabled()) && !keyguardShowing) {
                     mAutoHBMActive = true;
                     enableHBM(true);
                 }
             }
-            if (lux < 6500.0f) {
+            if (lux < threshold) {
                 if (mAutoHBMActive) {
                     mAutoHBMActive = false;
                     enableHBM(false);
@@ -88,6 +93,7 @@ public class AutoHBMService extends Service {
         IntentFilter screenStateFilter = new IntentFilter(Intent.ACTION_SCREEN_ON);
         screenStateFilter.addAction(Intent.ACTION_SCREEN_OFF);
         registerReceiver(mScreenStateReceiver, screenStateFilter);
+        mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
         if (pm.isInteractive()) {
             activateLightSensorRead();
