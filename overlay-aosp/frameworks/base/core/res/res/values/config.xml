@@ -69,4 +69,8 @@
 
     <!-- Defines custom Vendor sensor for pocket detection. -->
     <string name="config_pocketJudgeVendorSensorName">oneplus.sensor.pocket</string>
+
+    <!-- FOD icon dim-->
+    <bool name="config_targetUsesInKernelDimming">true</bool>
+
 </resources>
