@@ -30,7 +30,7 @@
 
         <SwitchPreference
             android:key="auto_hbm"
-            android:icon="@drawable/ic_hbm_mode_icon"
+            android:icon="@drawable/ic_autohbm_mode_icon"
             android:summary="@string/auto_hbm_summary"
             android:title="@string/auto_hbm_title" />
 
