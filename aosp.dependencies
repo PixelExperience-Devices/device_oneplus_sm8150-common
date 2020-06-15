@@ -2,7 +2,12 @@
   {
     "repository"  : "kernel_oneplus_sm8150",
     "target_path" : "kernel/oneplus/sm8150",
-    "branch"      : "ten"
+    "branch"      : "weeb"
+  },
+  {
+    "repository"  : "kdrag0n/proton-clang",
+    "target_path" : "prebuilts/clang/host/linux-x86/clang-proton",
+    "branch"      : "master"
   },
   {
     "repository"  : "vendor_oneplus",
