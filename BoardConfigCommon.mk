@@ -100,12 +100,7 @@ BOARD_USES_QCNE := true
 TARGET_SURFACEFLINGER_FOD_LIB := //$(VENDOR_PATH):libfod_extension.oneplus_msmnile
 
 # Dex
-ifeq ($(HOST_OS),linux)
-  ifneq ($(TARGET_BUILD_VARIANT),eng)
-    WITH_DEXPREOPT ?= true
-  endif
-endif
-WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= true
+BOARD_USES_SYSTEM_OTHER_ODEX := true
 
 # Display
 MAX_VIRTUAL_DISPLAY_DIMENSION := 4096

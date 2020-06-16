@@ -215,6 +215,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.cryptfshw@1.0.vendor
 
+# Dex
+PRODUCT_PACKAGES += \
+     cppreopts.sh
+PRODUCT_PROPERTY_OVERRIDES += \
+     ro.cp_system_other_odex=1
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.3-service \
