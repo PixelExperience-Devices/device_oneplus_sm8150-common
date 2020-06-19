@@ -11,6 +11,37 @@
      limitations under the License.
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="audio"
+        android:title="@string/audio_title">
+
+        <SwitchPreference
+            android:key="enable_dolby_atmos"
+            android:summary="@string/enable_dolby_summary"
+            android:title="@string/enable_dolby_title"
+            android:icon="@drawable/ic_dolby"
+            android:defaultValue="true"
+            android:persistent="true" />
+
+        <Preference
+            android:key="audio_dolby_atmos"
+            android:title="@string/dolby_title"
+            android:summary="@string/dolby_summary"
+            android:icon="@drawable/ic_dolby_atmos"
+            android:dependency="enable_dolby_atmos"
+            android:persistent="false">
+            <intent
+                 android:targetPackage="com.oneplus.sound.tuner"
+                 android:targetClass="com.oneplus.sound.tuner.panoramic.DolbyPanoramicSoundActivity" />
+        </Preference>
+
+        <Preference
+            android:icon="@drawable/ic_info"
+            android:persistent="false"
+            android:summary="@string/enable_dolby_info" />
+    </PreferenceCategory>
+    
     <PreferenceCategory
         android:key="graphics"
         android:title="@string/display_title">
@@ -39,23 +70,6 @@
             android:title="@string/auto_hbm_threshold_title"
             android:summary="@string/auto_hbm_threshold_summary" />
 
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="gestures"
-        android:title="@string/screen_gestures_panel_title">
-
-        <Preference
-            android:key="touchscreen_gesture_settings"
-            android:icon="@drawable/ic_gestures_icon"
-            android:persistent="false"
-            android:title="@string/touchscreen_gesture_settings_title"
-            android:summary="@string/touchscreen_gesture_settings_summary">
-            <intent
-                    android:action="android.intent.action.MAIN"
-                    android:targetPackage="com.android.touch.gestures"
-                    android:targetClass="com.android.touch.gestures.TouchscreenGestureSettings" />
-        </Preference>
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -88,36 +102,6 @@
           android:summary="%s"
           android:entries="@array/notification_slider_action_entries"
           android:entryValues="@array/notification_slider_action_entry_values" />
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="audio"
-        android:title="@string/audio_title">
-
-        <SwitchPreference
-            android:key="enable_dolby_atmos"
-            android:summary="@string/enable_dolby_summary"
-            android:title="@string/enable_dolby_title"
-            android:icon="@drawable/ic_dolby"
-            android:defaultValue="true"
-            android:persistent="true" />
-
-        <Preference
-            android:key="audio_dolby_atmos"
-            android:title="@string/dolby_title"
-            android:summary="@string/dolby_summary"
-            android:icon="@drawable/ic_dolby_atmos"
-            android:dependency="enable_dolby_atmos"
-            android:persistent="false">
-            <intent
-                 android:targetPackage="com.oneplus.sound.tuner"
-                 android:targetClass="com.oneplus.sound.tuner.panoramic.DolbyPanoramicSoundActivity" />
-        </Preference>
-
-        <Preference
-            android:icon="@drawable/ic_info"
-            android:persistent="false"
-            android:summary="@string/enable_dolby_info" />
     </PreferenceCategory>
     
 </PreferenceScreen>
