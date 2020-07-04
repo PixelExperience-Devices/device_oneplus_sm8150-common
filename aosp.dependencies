@@ -16,9 +16,10 @@
     "remote"      : "pixel-devices-bitbucket"
   },
   {
-    "repository"  : "LineageOS/android_device_oneplus_common",
+    "repository"  : "android_device_oneplus_common",
     "target_path" : "device/oneplus/common",
-    "branch"      : "lineage-17.1"
+    "branch"      : "lineage-17.1",
+    "remote"      : "lineage"
   },
   {
     "repository"  : "packages_apps_PixelLiveWallpaper",
@@ -27,39 +28,39 @@
     "remote"      : "pixel-gitlab"
   },
   {
-    "repository"  :"LineageOS/android_vendor_nxp_interfaces_opensource_nfc",
+    "repository"  :"android_vendor_nxp_interfaces_opensource_nfc",
     "target_path" :"vendor/nxp/opensource/interfaces/nfc",
     "branch"      :"lineage-17.1",
-    "remote"      :"github"
+    "remote"      :"lineage"
   },
   {
-    "repository"  :"LineageOS/android_vendor_nxp_opensource_external_libnfc-nci",
+    "repository"  :"android_vendor_nxp_opensource_external_libnfc-nci",
     "target_path" :"vendor/nxp/opensource/commonsys/external/libnfc-nci",
     "branch"      :"lineage-17.1",
-    "remote"      :"github"
+    "remote"      :"lineage"
   },
   {
-    "repository"  :"LineageOS/android_vendor_nxp_opensource_frameworks",
+    "repository"  :"android_vendor_nxp_opensource_frameworks",
     "target_path" :"vendor/nxp/opensource/commonsys/frameworks",
     "branch"      :"lineage-17.1",
-    "remote"      :"github"
+    "remote"      :"lineage"
   },
   {
-    "repository"  :"LineageOS/android_vendor_nxp_opensource_packages_apps_Nfc",
+    "repository"  :"android_vendor_nxp_opensource_packages_apps_Nfc",
     "target_path" :"vendor/nxp/opensource/commonsys/packages/apps/Nfc",
     "branch"      :"lineage-17.1",
-    "remote"      :"github"
+    "remote"      :"lineage"
   },
   {
-    "repository"  :"LineageOS/android_vendor_nxp_opensource_halimpl",
+    "repository"  :"android_vendor_nxp_opensource_halimpl",
     "target_path" :"vendor/nxp/opensource/sn100x/halimpl",
     "branch"      :"lineage-17.1-sn100x",
-    "remote"      :"github"
+    "remote"      :"lineage"
   },
   {
-    "repository"  :"LineageOS/android_vendor_nxp_opensource_hidlimpl",
+    "repository"  :"android_vendor_nxp_opensource_hidlimpl",
     "target_path" :"vendor/nxp/opensource/sn100x/hidlimpl",
     "branch"      :"lineage-17.1-sn100x",
-    "remote"      :"github"
+    "remote"      :"lineage"
   }
 ]
