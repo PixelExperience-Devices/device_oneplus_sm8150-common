@@ -10,9 +10,10 @@
     "branch"      : "master"
   },
   {
-    "repository"  : "vendor_oneplus",
-    "target_path" : "vendor/oneplus",
-    "branch"      : "ten"
+    "repository"  : "vendor_oneplus_sm8150-common",
+    "target_path" : "vendor/oneplus/sm8150-common",
+    "branch"      : "ten",
+    "remote"      : "pixel-devices-bitbucket"
   },
   {
     "repository"  : "LineageOS/android_device_oneplus_common",
