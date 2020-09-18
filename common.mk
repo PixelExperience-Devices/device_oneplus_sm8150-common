@@ -376,8 +376,7 @@ PRODUCT_PACKAGES += \
     libstagefrighthw
 
 # Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
+$(call inherit-product, vendor/qcom/opensource/power/power-vendor-product.mk)
 
 # Protobuf
 PRODUCT_PACKAGES += \
