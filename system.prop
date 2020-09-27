@@ -19,6 +19,9 @@ persist.debug.coresight.config=stm-events
 # DPM
 persist.vendor.dpm.feature=9
 
+# Force triple frame buffers
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+
 # GPS
 persist.vendor.overlay.izat.optin=rro
 
