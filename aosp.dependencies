@@ -1,0 +1,32 @@
+[
+  {
+    "repository": "kernel_oneplus_sm8150",
+    "target_path": "kernel/oneplus/sm8150",
+    "branch": "ten-plus-wip",
+    "remote": "pixel-devices"
+  },
+  {
+    "repository": "kdrag0n/proton-clang",
+    "target_path": "prebuilts/clang/host/linux-x86/clang-proton",
+    "branch": "master",
+    "remote": "github"
+  },
+  {
+    "repository": "android_device_oneplus_common",
+    "target_path": "device/oneplus/common"
+    "branch": "lineage-17.1",
+    "remote": "lineage"
+  },
+  {
+    "repository": "vendor_oneplus_sm8150-common",
+    "target_path": "vendor/oneplus/sm8150-common",
+    "branch": "ten-plus-wip",
+    "remote": "pixel-devices-blobs"
+  },
+  {
+    "repository": "packages_apps_PixelLiveWallpaper",
+    "target_path": "packages/apps/PixelLiveWallpaper",
+    "branch": "ten",
+    "remote": "pixel-gitlab"
+  },
+]
