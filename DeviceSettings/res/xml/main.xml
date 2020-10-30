@@ -57,12 +57,6 @@
             android:icon="@drawable/ic_info_outline_24dp"
             android:persistent="false"
             android:summary="@string/refresh_rate_warning" />
-
-        <SwitchPreference
-            android:key="fps_info"
-            android:title="@string/fps_info_title"
-            android:summary="@string/fps_info_summary"
-            android:persistent="true" />
     </PreferenceCategory>
 
     <PreferenceCategory

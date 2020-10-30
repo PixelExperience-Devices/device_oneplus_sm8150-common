@@ -112,10 +112,6 @@
             </intent-filter>
         </service>
 
-        <service android:name="com.aosip.device.DeviceSettings.FPSInfoService"
-                android:exported="false">
-        </service>
-
         <!-- Search indexing -->
         <provider
             android:name=".ConfigPanelSearchIndexablesProvider"
