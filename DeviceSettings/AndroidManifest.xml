@@ -115,6 +115,9 @@
             </intent-filter>
         </service>
 
+        <service android:name="com.statix.device.DeviceSettings.HBMModeService"
+        android:exported="false" />
+
         <!-- Search indexing -->
         <provider
             android:name=".ConfigPanelSearchIndexablesProvider"
