@@ -423,10 +423,6 @@ PRODUCT_PACKAGES += \
     KeyHandler \
     tri-state-key_daemon.vendor
 
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
-
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
