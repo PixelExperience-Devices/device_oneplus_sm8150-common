@@ -91,6 +91,29 @@ persist.rcs.supported=0
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
 
+# SurfaceFlinger
+ro.surface_flinger.protected_contents=true
+ro.surface_flinger.use_color_management=true
+ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.has_HDR_display=true
+ro.surface_flinger.wcg_composition_dataspace=143261696
+
+# SurfaceFlinger - Colors
+ro.surface_flinger.display_primary_red=0.571498,0.268889,0.000102
+ro.surface_flinger.display_primary_green=0.264549,0.688889,0.044777
+ro.surface_flinger.display_primary_blue=0.183287,0.073333,0.965525
+ro.surface_flinger.display_primary_white=0.950352,1.0,1.089366
+
+# SurfaceFlinger - Enable backpressure for GL comp
+debug.sf.enable_gl_backpressure=1
+debug.sf.use_phase_offsets_as_durations=1
+debug.sf.late.sf.duration=10500000
+debug.sf.late.app.duration=20500000
+debug.sf.early.sf.duration=21000000
+debug.sf.early.app.duration=16500000
+debug.sf.earlyGl.sf.duration=13500000
+debug.sf.earlyGl.app.duration=21000000
+
 # WiFi
 config.disable_rtt=true
 
