@@ -44,4 +44,8 @@
          0: Left side
          1: Right side -->
     <integer name="config_alertSliderLocation">1</integer>
+
+    <!-- Hide FOD while Going to sleep from lockscreen to avoid HBM flicker
+	 or FOD Circle hiding after the screen is put to sleep -->
+    <bool name="config_hideFodCircleGoingToSleep">true</bool>
 </resources>
