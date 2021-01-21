@@ -1507,9 +1507,9 @@ vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
-# Telephony - from LA.UM.9.1.r1-07000-SMxxx0.0
-system_ext/framework/qti-telephony-common.jar|695214c1294dc9a79ee48387140c9907203300d7
--system_ext/priv-app/ims/ims.apk|d2e1bb9b56805e08f6fb35bee8c1d59035904e27
+# Telephony - from LA.QSSI.11.0.r1-08400-qssi.0
+system_ext/framework/qti-telephony-common.jar|710406e01836b558c802ba4960fa59f31545389e
+-system_ext/priv-app/ims/ims.apk|29ba29b833e448f49cfa10a11617c41d2fd31fb0
 
 # Thermal
 vendor/bin/thermal-engine
