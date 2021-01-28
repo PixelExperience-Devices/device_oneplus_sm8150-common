@@ -170,7 +170,7 @@ TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD := true
 TARGET_SCREEN_DENSITY := 360
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2020-07-01
+VENDOR_SECURITY_PATCH := 2020-11-01
 
 # SELinux
 include device/qcom/sepolicy_vndr/SEPolicy.mk
