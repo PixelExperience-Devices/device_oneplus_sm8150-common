@@ -34,23 +34,6 @@
     <!-- Shows the required view for in-display fingerprint -->
     <bool name="config_supportsInDisplayFingerprint">true</bool>
 
-    <!-- OnePlus uses a proprietary vibrator hal to utilize the new powerful motor since the
-         OnePlus 7 Pro. This HAL expects a different format for the data instead of the usual (ms)
-         timing(the duration which the vibrator is expected to vibrate for). -->
-    <bool name="config_hasOnePlusHapticMotor">true</bool>
-
-    <!-- Whether device has physical tri state switch -->
-    <bool name="config_hasAlertSlider">true</bool>
-
-    <!-- The location of the devices physical tri state switch
-         0: Left side
-         1: Right side -->
-    <integer name="config_alertSliderLocation">1</integer>
-
-    <!-- Hide FOD while Going to sleep from lockscreen to avoid HBM flicker
-	 or FOD Circle hiding after the screen is put to sleep -->
-    <bool name="config_hideFodCircleGoingToSleep">true</bool>
-
     <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/power_supply/battery/fastchg_status</string>
 
 </resources>
