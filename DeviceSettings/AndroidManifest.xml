@@ -55,11 +55,11 @@
         <activity android:name=".DeviceSettings" />
         <activity android:name=".KeyHandler" />
 
-        <activity
+        <!-- <activity
             android:name=".TouchscreenGestureSettings"
             android:label="@string/touchscreen_gesture_settings_title"
             android:theme="@style/AppTheme">
-        </activity>
+        </activity> -->
 
         <receiver android:name="org.aosp.device.DeviceSettings.Startup" >
             <intent-filter android:priority="100" >

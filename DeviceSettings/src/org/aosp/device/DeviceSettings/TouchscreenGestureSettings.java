@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.aosp.device.DeviceSettings;
+/*package org.aosp.device.DeviceSettings;
 
 import android.app.ActionBar;
 import android.app.Fragment;
@@ -254,4 +254,4 @@ public class TouchscreenGestureSettings extends PreferenceActivity
         }
         return super.onOptionsItemSelected(item);
     }
-}
+}*/

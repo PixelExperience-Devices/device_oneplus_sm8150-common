@@ -40,7 +40,6 @@
             android:title="@string/auto_hbm_threshold_title"
             android:summary="@string/auto_hbm_threshold_summary" />
 
-        </Preference>
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -75,7 +74,7 @@
           android:entryValues="@array/notification_slider_action_entry_values" />
     </PreferenceCategory>
 
-    <PreferenceCategory
+    <!-- <PreferenceCategory
         android:key="screenoffgestures"
         android:title="@string/touch_title">
         <Preference
@@ -86,6 +85,7 @@
             <intent android:action="android.intent.action.MAIN"
                     android:targetPackage="org.aosp.device.DeviceSettings"
                     android:targetClass="org.aosp.device.DeviceSettings.TouchscreenGestureSettings" />
-    </PreferenceCategory>
+        </Preference>
+    </PreferenceCategory> -->
 
 </PreferenceScreen>

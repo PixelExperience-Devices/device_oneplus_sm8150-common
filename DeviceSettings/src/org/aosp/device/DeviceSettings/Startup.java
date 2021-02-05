@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.aosp.device.DeviceSettings;
+/*package org.aosp.device.DeviceSettings;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -69,4 +69,4 @@ public class Startup extends BroadcastReceiver {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
         preferences.edit().putBoolean(ONE_TIME_TUNABLE_RESTORE, true).apply();
     }
-}
+}*/
