@@ -138,6 +138,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
+# AOSP Recovery
+TARGET_USES_AOSP_RECOVERY := true
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     liba2dpoffload \
