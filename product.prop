@@ -2,3 +2,10 @@
 ro.surface_flinger.supports_background_blur=1
 persist.sys.sf.disable_blurs=1
 ro.sf.blurs_are_expensive=1
+
+# Audio
+audio.offload.min.duration.secs=30
+audio.sys.noisy.broadcast.delay=500
+audio.sys.mute.latency.factor=2
+audio.sys.offload.pstimeout.secs=3
+audio.sys.routing.latency=0
