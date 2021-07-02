@@ -110,6 +110,7 @@ ro.fastbootd.available=true
 # Fingerprint
 persist.vendor.qfp=true
 persist.vendor.qfp.enable_fd=1
+vendor.boot.fingerprintbstate=orange
 
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/config
