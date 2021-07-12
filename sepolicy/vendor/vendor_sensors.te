@@ -1,2 +1,5 @@
 # Allow vendor_sensors to get vendor_sensors_prop
 get_prop(vendor_sensors, vendor_sensors_prop)
+
+r_dir_file(vendor_sensors, sysfs_project_info)
+allow vendor_sensors mnt_vendor_file:file { getattr open read };
