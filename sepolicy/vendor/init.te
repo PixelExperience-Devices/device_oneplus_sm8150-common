@@ -1,2 +1,4 @@
 # Allow init to create vl53l1_socket
 allow init vl53l1_socket:sock_file create_file_perms;
+
+allow init adsprpcd_file:file mounton;
