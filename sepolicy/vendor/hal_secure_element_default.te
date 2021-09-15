@@ -1,0 +1,6 @@
+allow hal_secure_element_default nxpnfc_hwservice:hwservice_manager find;
+allow hal_secure_element_default nfc_device:chr_file rw_file_perms;
+
+binder_call(hal_secure_element_default, hal_nfc_default)
+
+get_prop(hal_secure_element_default, hwservicemanager_prop)
