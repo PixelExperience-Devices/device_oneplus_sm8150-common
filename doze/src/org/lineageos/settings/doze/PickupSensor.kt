@@ -36,7 +36,7 @@ class PickupSensor(private val context: Context, sensorType: String) : SensorEve
         if (event.values[0] == 1.0f) {
             if (Utils.isPickUpSetToWake(context)) {
                 wakeLock.acquire(WAKELOCK_TIMEOUT_MS)
-                powerManager.wakeUpWithProximityCheck(
+                powerManager.wakeUp(
                     SystemClock.uptimeMillis(), PowerManager.WAKE_REASON_GESTURE, TAG
                 )
             } else {
