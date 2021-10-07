@@ -400,6 +400,7 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_PACKAGES += \
     als_correction_service.oneplus_msmnile \
+    android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors@2.0-service.oneplus_msmnile \
     libsensorndkbridge \
     sensors.oneplus
