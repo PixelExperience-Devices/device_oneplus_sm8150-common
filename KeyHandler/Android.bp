@@ -9,7 +9,7 @@ android_app {
     system_ext_specific: true,
 
     static_libs: [
-        "org.lineageos.settings.resources",
+        "org.pixelexperience.settings.resources",
     ],
 
     optimize: {
