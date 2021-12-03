@@ -18,3 +18,11 @@ cc_library {
     srcs: ["libril_shim.cpp"],
     vendor: true
 }
+
+// llibshim_imsvidecoder
+cc_library_shared {
+    name: "libshim_imsvidecoder",
+    srcs: ["libshim_imsvidecoder.cpp"],
+    compile_multilib: "64",
+    system_ext_specific: true,
+}
