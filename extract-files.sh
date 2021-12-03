@@ -66,6 +66,9 @@ function blob_fixup() {
         vendor/bin/hw/qcrild)
             "${PATCHELF}" --add-needed libril_shim.so "${2}"
             ;;
+        system_ext/lib64/lib-imsvideocodec.so)
+            "${PATCHELF}" --add-needed libshim_imsvidecoder.so "${2}"
+            ;;
     esac
     case "${DEVICE}" in
         hotdog | hotdogb | hotdogg )
