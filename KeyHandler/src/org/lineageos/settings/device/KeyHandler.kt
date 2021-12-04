@@ -78,6 +78,11 @@ class KeyHandler : Service() {
         alertSliderEventObserver.startObserving("tri_state_key")
     }
 
+    override fun onDestroy() {
+        unregisterReceiver(broadcastReceiver)
+        alertSliderEventObserver.stopObserving()
+    }
+
     override fun onBind(intent: Intent?): IBinder? = null
 
     private fun vibrateIfNeeded(mode: Int) {
