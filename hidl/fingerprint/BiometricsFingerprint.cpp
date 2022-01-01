@@ -30,6 +30,7 @@
 #define OP_DISABLE_FP_LONGPRESS 4
 #define OP_RESUME_FP_ENROLL 8
 #define OP_FINISH_FP_ENROLL 10
+#define OP_DISPLAY_AOD_MODE 8
 #define OP_DISPLAY_NOTIFY_PRESS 9
 #define OP_DISPLAY_SET_DIM 10
 
@@ -94,12 +95,14 @@ Return<bool> BiometricsFingerprint::isUdfps(uint32_t) {
 }
 
 Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, float) {
+    mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 1);
     mVendorDisplayService->setMode(OP_DISPLAY_NOTIFY_PRESS, 1);
 
     return Void();
 }
 
 Return<void> BiometricsFingerprint::onFingerUp() {
+    mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 0);
     mVendorDisplayService->setMode(OP_DISPLAY_NOTIFY_PRESS, 0);
 
     return Void();
@@ -256,6 +259,8 @@ Return<RequestStatus> BiometricsFingerprint::setActiveGroup(uint32_t gid,
 Return<RequestStatus> BiometricsFingerprint::authenticate(uint64_t operationId,
         uint32_t gid) {
     set(POWER_STATUS_PATH, 1);
+    mVendorDisplayService->setMode(OP_DISPLAY_NOTIFY_PRESS, 0);
+    mVendorDisplayService->setMode(OP_DISPLAY_AOD_MODE, 0);
     mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 1);
     mVendorFpService->updateStatus(OP_ENABLE_FP_LONGPRESS);
 
