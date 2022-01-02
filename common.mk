@@ -392,6 +392,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     oneplus-fwk
 
+# OnePlus Apps
+PRODUCT_PACKAGES += \
+    OnePlusCameraOverlay \
+    OnePlusGalleryOverlay
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
