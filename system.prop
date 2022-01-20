@@ -9,6 +9,7 @@ vendor.bluetooth.soc=cherokee
 
 # Bluetooth
 bluetooth.device.class_of_device=90,2,12
+bluetooth.profile.asha.central=false
 persist.vendor.bt.a2dp.aac_whitelist=false
 ro.bluetooth.library_name=libbluetooth_qti.so
 
