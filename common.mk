@@ -412,6 +412,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
+# Secure Element
+PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.0.vendor \
+	android.hardware.secure_element@1.1.vendor \
+	android.hardware.secure_element@1.2.vendor
+
 # Seccomp policy
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy
