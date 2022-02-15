@@ -16,7 +16,12 @@
 
 #include <compositionengine/UdfpsExtension.h>
 #include <vendor/oneplus/hardware/display/1.0/IOneplusDisplay.h>
+
+#if __has_include(<display/drm/sde_drm.h>)
+#include <display/drm/sde_drm.h>
+#elif __has_include(<drm/sde_drm.h>)
 #include <drm/sde_drm.h>
+#endif
 
 uint32_t getUdfpsZOrder(uint32_t z, bool touched) {
 #ifdef FOD_PRESSED_LAYER_ZORDER
