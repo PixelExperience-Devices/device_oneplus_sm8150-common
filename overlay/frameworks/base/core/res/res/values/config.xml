@@ -508,4 +508,9 @@
     <string name="db_default_journal_mode">MEMORY</string>
     <string name="db_default_sync_mode">OFF</string>
     <string name="db_wal_sync_mode">OFF</string>
+    
+     <!-- Package name of a telephony-related system app, such as an IMS service.
+         Exempted from privacy indicators. -->
+     <string name="config_systemTelephonyPackage" translatable="false">com.qualcomm.qti.cne</string>
+
 </resources>
