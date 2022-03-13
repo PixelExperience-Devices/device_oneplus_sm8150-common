@@ -1,4 +1,4 @@
-package vendor.oneplus.camera.CameraHIDL@1.0;
+package vendor.oneplus.hardware.camera@1.0;
 
 interface IOnePlusCameraProvider {
     setCameraId(int32_t name) generates (bool status);
