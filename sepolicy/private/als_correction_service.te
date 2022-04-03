@@ -30,3 +30,5 @@ allow als_correction_service ion_device:chr_file rw_file_perms;
 
 # Allow als_correction_service to get vendor_sensors_als_prop
 set_prop(als_correction_service, vendor_sensors_als_prop)
+
+binder_call(surfaceflinger, als_correction_service)
