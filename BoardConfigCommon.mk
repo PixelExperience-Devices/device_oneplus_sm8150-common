@@ -110,6 +110,13 @@ TARGET_BOARD_PLATFORM := msmnile
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
+# LiveDisplay
+ifneq ("$(wildcard hardware/lineage/livedisplay)", "")
+SOONG_CONFIG_NAMESPACES += livedisplay
+SOONG_CONFIG_livedisplay += enabled
+SOONG_CONFIG_livedisplay_enabled := true
+endif
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
