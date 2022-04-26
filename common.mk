@@ -261,6 +261,10 @@ PRODUCT_PACKAGES += \
     vendor.oneplus.hardware.display@1.0.vendor \
     vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0.vendor
+
 # GPS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
