@@ -1,0 +1,2 @@
+# Use a custom app domain for oneplus camera
+user=_app isPrivApp=true seinfo=oneplus name=com.oneplus.camera domain=oneplus_camera_app type=app_data_file levelFrom=all
