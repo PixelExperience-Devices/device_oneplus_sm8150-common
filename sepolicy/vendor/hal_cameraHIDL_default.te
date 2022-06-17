@@ -4,4 +4,5 @@ hal_server_domain(hal_cameraHIDL_default, hal_cameraHIDL)
 type hal_cameraHIDL_default_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(hal_cameraHIDL_default)
 
-allow hal_cameraHIDL_default vendor_camera_data_file:dir { search write };
+allow hal_cameraHIDL_default vendor_camera_data_file:dir { ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads add_name remove_name search };
+allow hal_cameraHIDL_default vendor_camera_data_file:file { ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads };

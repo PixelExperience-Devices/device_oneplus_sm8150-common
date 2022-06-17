@@ -15,3 +15,9 @@ allow system_app vendor_sysfs_graphics:file { getattr open read };
 
 # Allow system_app to access zram sysfs nodes
 allow system_app sysfs_zram:dir { search r_file_perms };
+
+allow system_app hal_cameraHIDL_hwservice:hwservice_manager { find };
+allow system_app oem_service:service_manager { find };
+allow system_app sysfs_leds:dir { search };
+allow system_app sysfs_oem:file { read write getattr open };
+binder_call(system_app, hal_cameraHIDL_default)
