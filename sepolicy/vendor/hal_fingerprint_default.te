@@ -38,3 +38,6 @@ allow hal_fingerprint_default sysfs_aod:file r_file_perms;
 get_prop(hal_fingerprint_default, vendor_adsprpc_prop)
 
 allow hal_fingerprint_default vendor_sysfs_battery_supply:dir { search read };
+
+allow hal_fingerprint_default sysfs_fpc:file { read };
+allow hal_fingerprint_default vendor_sysfs_battery_supply:file { read };
