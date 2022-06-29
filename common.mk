@@ -358,6 +358,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf \
     $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
 
+# OnePlus apps
+$(call inherit-product, vendor/oneplus/sm8150/apps/config.mk)
+
 # OMX
 PRODUCT_PACKAGES += \
     libavservices_minijail \
