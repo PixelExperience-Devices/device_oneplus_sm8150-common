@@ -1,4 +1,10 @@
 # Type define oneplus camera domain
 type oneplus_camera_app, domain, coredomain;
+app_domain(oneplus_camera_app);
+hal_client_domain(oneplus_camera_app, hal_cameraHIDL)
 
 allow oneplus_camera_app vendor_sysfs_battery_supply:dir { search };
+
+allow oneplus_camera_app adsprpcd_file:dir r_dir_perms;
+
+allow priv_app adsprpcd_file:dir { read };
