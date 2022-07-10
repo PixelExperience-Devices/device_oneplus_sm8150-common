@@ -12,10 +12,10 @@
     "remote"      : "pixel-devices-blobs"
   },
   {
-    "repository"  : "classified/hardware_oneplus",
+    "repository"  : "hardware_oneplus",
     "target_path" : "hardware/oneplus",
     "branch"      : "twelve",
-    "remote"      : "github"
+    "remote"      : "pixel"
   },
   {
     "repository"  : "vendor_oneplus_sm8150_apps",
