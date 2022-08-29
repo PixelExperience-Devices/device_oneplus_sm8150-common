@@ -415,7 +415,6 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     libprotobuf-cpp-full \
     libril_shim \
-    libshim_imsvidecoder \
     librmnetctl \
     libxml2
 
