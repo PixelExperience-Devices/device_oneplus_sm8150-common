@@ -7,10 +7,6 @@ ro.audio.monitorRotation=true
 bt.max.hfpclient.connections=1
 vendor.bluetooth.soc=cherokee
 
-# Bluetooth
-persist.vendor.bt.a2dp.aac_whitelist=false
-ro.bluetooth.library_name=libbluetooth_qti.so
-
 # Charger
 ro.charger.enable_suspend=true
 
