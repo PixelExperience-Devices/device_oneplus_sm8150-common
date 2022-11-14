@@ -10,5 +10,11 @@
     "target_path": "kernel/oneplus/sm8150",
     "branch": "thirteen",
     "remote": "pixel-devices"
-  }
+  },
+  {
+    "repository"  : "vendor_oneplus_sm8150-common",
+    "target_path" : "vendor/oneplus/sm8150-common",
+    "branch"      : "thirteen",
+    "remote"      : "pixel-devices-blobs"
+  },
 ]
