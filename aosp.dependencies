@@ -2,7 +2,7 @@
   {
     "repository": "android_hardware_oplus",
     "target_path": "hardware/oplus",
-    "branch": "thirteen",
+    "branch": "thirteen-plus",
     "remote": "pixel-devices"
   },
   {
