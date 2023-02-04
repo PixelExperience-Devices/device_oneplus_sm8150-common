@@ -1,0 +1,1 @@
+allow vl53l1_daemon_main sysfs:file { read };

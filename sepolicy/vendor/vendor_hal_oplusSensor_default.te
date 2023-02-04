@@ -1,0 +1,1 @@
+allow vendor_hal_oplusSensor_default block_device:dir { search };
