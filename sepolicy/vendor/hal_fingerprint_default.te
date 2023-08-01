@@ -1,5 +1,3 @@
-hal_client_domain(hal_fingerprint_default, hal_display)
-
 allow hal_fingerprint_default self:netlink_socket create_socket_perms_no_ioctl;
 
 # Allow binder communication with vendor_hal_perf_default
