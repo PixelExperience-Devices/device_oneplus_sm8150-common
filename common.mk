@@ -407,8 +407,7 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH) \
-    hardware/oneplus
+    $(LOCAL_PATH)
 
 # Telephony
 PRODUCT_PACKAGES += \

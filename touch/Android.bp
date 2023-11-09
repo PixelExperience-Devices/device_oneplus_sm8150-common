@@ -1,3 +1,4 @@
+//
 // Copyright (C) 2019-2021 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,33 +14,22 @@
 // limitations under the License.
 
 filegroup {
-    name: "vendor.lineage.livedisplay@2.1-oneplus-af",
-    srcs: ["AntiFlicker.cpp"],
-}
-
-filegroup {
-    name: "vendor.lineage.livedisplay@2.1-oneplus-se",
-    srcs: ["SunlightEnhancement.cpp"],
+    name: "vendor.lineage.touch@1.0-oneplus-touchgesture",
+    srcs: ["TouchscreenGesture.cpp"],
 }
 
 cc_library_headers {
-    name: "vendor.lineage.livedisplay@2.1-oneplus-headers",
+    name: "vendor.lineage.touch@1.0-oneplus-headers",
     vendor_available: true,
     export_include_dirs: ["include"],
 }
 
-cc_binary {
-    name: "vendor.lineage.livedisplay@2.1-service.oneplus_msmnile",
-    init_rc: ["vendor.lineage.livedisplay@2.1-service.oneplus_msmnile.rc"],
-    vintf_fragments: ["vendor.lineage.livedisplay@2.1-service.oneplus_msmnile.xml"],
+cc_defaults {
+    name: "oneplus_touch_hal_defaults",
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
     srcs: [
-        ":vendor.lineage.livedisplay@2.0-sdm-pa",
-        ":vendor.lineage.livedisplay@2.0-sdm-utils",
-        ":vendor.lineage.livedisplay@2.1-oneplus-af",
-        ":vendor.lineage.livedisplay@2.1-oneplus-se",
-        "DisplayModes.cpp",
+        ":vendor.lineage.touch@1.0-oneplus-touchgesture",
         "service.cpp",
     ],
     shared_libs: [
@@ -47,12 +37,26 @@ cc_binary {
         "libbinder",
         "libhidlbase",
         "libutils",
-        "vendor.lineage.livedisplay@2.0",
-        "vendor.lineage.livedisplay@2.1",
+        "vendor.lineage.touch@1.0",
     ],
+    local_include_dirs: ["include"],
     header_libs: [
-        "vendor.lineage.livedisplay@2.0-sdm-headers",
-        "vendor.lineage.livedisplay@2.1-oneplus-headers",
+        "vendor.lineage.touch@1.0-oneplus-headers",
     ],
-    proprietary: true,
+}
+
+cc_binary {
+    name: "lineage.touch@1.0-service.oneplus",
+    defaults: ["oneplus_touch_hal_defaults"],
+    init_rc: ["lineage.touch@1.0-service.oneplus.rc"],
+    vintf_fragments: ["lineage.touch@1.0-service.oneplus.xml"],
+    system_ext_specific: true,
+}
+
+cc_binary {
+    name: "vendor.lineage.touch@1.0-service.oneplus",
+    defaults: ["oneplus_touch_hal_defaults"],
+    init_rc: ["vendor.lineage.touch@1.0-service.oneplus.rc"],
+    vintf_fragments: ["vendor.lineage.touch@1.0-service.oneplus.xml"],
+    vendor: true,
 }

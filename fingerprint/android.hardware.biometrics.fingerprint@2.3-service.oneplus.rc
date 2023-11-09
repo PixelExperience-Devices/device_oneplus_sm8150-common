@@ -1,0 +1,14 @@
+service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.3-service.oneplus
+    # "class hal" causes a race condition on some devices due to files created
+    # in /data. As a workaround, postpone startup until later in boot once
+    # /data is mounted.
+    class late_start
+    user system
+    group system input uhid
+    priority -20
+
+on boot
+    chown system system /sys/class/drm/card0-DSI-1/auth_status
+    chmod 0666 /sys/class/drm/card0-DSI-1/auth_status
+    chown system system /sys/class/drm/card0-DSI-1/power_status
+    chmod 0666 /sys/class/drm/card0-DSI-1/power_status
