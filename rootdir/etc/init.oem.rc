@@ -240,6 +240,11 @@ on fs
     chmod 0664 /sys/module/fsc/parameters/enable
 
 on boot
+
+   # Lineage Health
+    chmod 0660 /sys/class/power_supply/battery/input_suspend
+    chown system system /sys/class/power_supply/battery/input_suspend
+    
 #ifdef VENDOR_EDIT
     chmod 0666 /dev/goodix_fp
     chmod 0660 /sys/devices/platform/soc/soc:fingerprint_detect/sensor_version
